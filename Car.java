@@ -68,7 +68,9 @@ public class Car {
         System.out.print("Which place do you want to travel? ");
         travel(input.nextLine());
         System.out.print("Distance of the destination (km)?  ");
-        setGas(input.nextDouble());
+        calculateGasUsed(input.nextDouble());
+        
+
 
     }
 
@@ -78,6 +80,10 @@ public class Car {
 
     public void setGas(double gas) {
         this.gas = gas;
+    }
+
+    public void calculateGasUsed(double distance) {
+        gas -= distance / 15.5;
     }
     
 }
